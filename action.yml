@@ -1,0 +1,23 @@
+name: "AWS Lambda Updater"
+description: "Updates the AWS Lambda code"
+
+inputs:
+  lambdaName:
+    description: "Lambda name on AWS"
+    required: true
+  lambdaRegion:
+    description: "AWS Lambda region"
+    required: true
+  zipFilePath:
+    description: "Code zip file path"
+    required: true
+  awsAccessKey:
+    description: "AWS Access Key"
+    required: true
+  awsSecretKey:
+    description: "AWS Secret Key"
+    required: true
+
+runs:
+  using: "node16"
+  main: "./index.js"
